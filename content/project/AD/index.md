@@ -23,6 +23,24 @@ layout: single
 ### [Data Science Live](https://jh-cai.com/modern-data-mining/dsl5.html)
 
 ---
+```toml
+# basic color options: use only color names as shown in the
+# "Color Palette" section of http://tachyons.io/docs/themes/skins/
+siteBgColor = "near-white"
+sidebarBgColor = "light-gray"
+headingColor = "black"
+textColor = "dark-gray"
+sidebarTextColor = "mid-gray"
+bodyLinkColor = "blue"
+navLinkColor = "near-black"
+sidebarLinkColor = "near-black"
+footerTextColor = "silver"
+buttonTextColor = "near-white"
+buttonBgColor = "black"
+buttonHoverTextColor = "white"
+buttonHoverBgColor = "blue"
+borderColor = "moon-gray"
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(fig.height=3, fig.width=5, warning = F)
@@ -98,7 +116,9 @@ In the end, we obtain 608 valid observations with the following variables: `Gend
 
 There are 341 Non-AD observations and 267 AD observations.
 
-```{r, include = F}
+
+
+```toml
 data_cross <- read.csv("data/oasis_cross-sectional.csv")
 # all subjects are right-handed. Delay is all empty
 data_cross <- data_cross %>% select(-c(Hand, Delay))
@@ -108,7 +128,7 @@ head(data_cross)
 ```
 
 
-```{r, include = F}
+```toml
 data_long <- read.csv("data/oasis_longitudinal.csv")
 # hand only has one unique value. 
 # Group has 3 categories: nondemented, demented, converted. Not interested in converted. Will create our own label.
@@ -119,7 +139,7 @@ head(data_long)
 ```
 
 
-```{r, include = F}
+```toml
 # combine data_cross and data_long
 data <- rbind(data_cross, data_long)
 ## check the number of columns which have missing values
@@ -130,7 +150,7 @@ sum(is.na(data$SES)) # 239
 sum(is.na(data$CDR)) # 201
 ```
 
-```{r, include = F}
+```toml
 # CDR is the target value. Drop columns where CDR is empty. Fill NA for the other three variables.
 data <- data[!is.na(data$CDR),]
 # EDUC: 18 different possible values, fill NA with mode
@@ -146,7 +166,7 @@ data[is.na(data$MMSE),"MMSE"] <- 27
 ```
 
 
-```{r, include = F}
+```toml
 # change gender to factor. recode
 colnames(data)[which(names(data) == "M.F")] <- "Gender"
 data$Gender <- as.factor(data$Gender)
@@ -156,7 +176,7 @@ data$AD <- as.factor(ifelse(data$CDR==0, 0, 1))
 data <- data %>% select(-CDR)
 ```
 
-```{r, include = F}
+```toml
 summary(data)
 ```
 
@@ -259,7 +279,7 @@ ggcorrplot(data_cor, method = "circle",
 
 We split the data into three sets: training, testing and validation. The training set is used to fit a model; the testing set is used to report a model's effectiveness; the validation set is held until the end to evaluate our final model. We randomly select 70% of the data to be the training set, 15% of the observations to be the testing set and the remaining 15% to the the validation set.
 
-```{r, include = F}
+```toml
 # train-validation-test split
 N <- length(data$AD)
 n1 <- floor(0.7 * N)
@@ -296,14 +316,14 @@ plot(fit1.cv)
 
 We start with choosing the set of variables which give the smallest cross-validated error. The 7 variables selected are: `Gender`, `Age`, `EDUC`, `SES`, `MMSE`, `eTIV` and `nWBV`.
 
-```{r, include = F}
+```toml
 coef.1se <- coef(fit1.cv, s = "lambda.min")
 coef.1se <- coef.1se[which(coef.1se != 0),]
 vars <- rownames(as.matrix(coef.1se))
 vars
 ```
 
-```{r, include = F}
+```toml
 fit.logit <- glm(AD~Gender+ Age + EDUC + SES + MMSE + eTIV + nWBV, family=binomial, data=data.train)
 summary(fit.logit)
 ```
@@ -320,7 +340,7 @@ Our final logistic model gives the following result:
 
 ![Result of Logistic Model](graph/logistic_result.png)
 
-```{r, include = F}
+```toml
 fit.logit.final <- glm(AD~Gender+ MMSE + nWBV, family=binomial, data=data.train)
 summary(fit.logit.final)
 ```
@@ -350,7 +370,7 @@ $$
 $$
 
 
-```{r, include = F}
+```toml
 #use test dataset to estimate misclassification error
 fit.logit.final.test <- predict(fit.logit.final,data.test,type = "response")
 logit.pred <- as.factor(ifelse(fit.logit.final.test > 1/2, 1, 0))
@@ -440,7 +460,7 @@ Using 0.5 as threshold to determine the class of instances in the test dataset, 
 | $\hat{Y}=0$ | 43 | 8 |
 | $\hat{Y}=1$ | 5 | 35 |
 
-```{r, include = F}
+```toml
 set.seed(3)
 fit.rf.final <- randomForest(AD~., data.train, 
                              mtry = 2, 
@@ -453,13 +473,13 @@ fit.rf.test.err
 
 
 
-```{r, include = F}
+```toml
 rf.cm  <- table(fit.rf.final.pred, data.test$AD)
 rf.cm
 ```
 
 
-```{r, include = F}
+```toml
 rf.recall <- rf.cm[2,2]/sum(rf.cm[,2])
 round(rf.recall,3)
 rf.precision <- rf.cm[2,2] / sum(rf.cm[2,]) # positive prediction, precision
@@ -490,7 +510,7 @@ load("RData/min_depth.rda")
 plot_min_depth_distribution(min_depth)
 ```
 
-```{r, include = F}
+```toml
 # importance_frame <- measure_importance(fit.rf.final)
 # plot_multi_way_importance(importance_frame, size_measure = "p_value")
 ```
@@ -545,7 +565,7 @@ In the case of gradient boosting, the `distribution` is set to be `multinomial`.
 load('RData/hyper_grid.RData')
 ```
 
-```{r, include = F}
+```toml
 set.seed(2)
 fit.gbm.final <- gbm(AD~ .,
                     distribution = "multinomial",
@@ -563,7 +583,7 @@ fit.gbm.final <- gbm(AD~ .,
 In the case of extreme gradient boosting, we apply 10-fold cross validation and set the `early_stopping round` to be 50 to avoid overfitting. This means that the algorithm will be forced to stop if we do not see an improvement of the model's performance in 50 iterations. Similar to the implementation of gradient boosting, we use grid search and test 240 models in total. We tune hyperparameters including learning rate, tree depth, minimum loss reduction for a split and penalty on the number of leaves in a tree, etc.
 
 
-```{r, include = F}
+```toml
 ## extreme gradient boosting
 data.train$AD <- as.numeric(as.factor(data.train$AD))-1
 data.test$AD <- as.numeric(as.factor(data.test$AD))-1
@@ -614,7 +634,7 @@ xgb.cv.result <- xgb.cv(data=dtrain, params = params, nrounds = 500,
 # save(xgb.tuned,file='RData/xgb.tuned.RData')
 ```
 
-```{r, include = F}
+```toml
 load('RData/xgb.tuned.RData')
 # xgb.tuned$bestTune
 ```
@@ -642,7 +662,7 @@ The confusion matrix of extreme gradient boosting model is:
 We see that on this specific testing dataset, gradient boosting model has fewer false discovery cases than the extreme gradient boosting model. On the other hand, extreme gradient boosting model has a better balance between false negative and false positive rate. Overall, the performance of the two boosting methods are rather similar.
 
 
-```{r, include = F}
+```toml
 # gradient boosting result
 fit.gbm.prob <- predict(fit.gbm.final, n.trees = fit.gbm.final$n.trees, data.test)
 pred.gbm <- as.factor(ifelse(fit.gbm.prob[,2,] >= 0, "1", "0"))
@@ -653,7 +673,7 @@ gb.cm
 ```
 
 
-```{r, include = F}
+```toml
 gb.recall <- gb.cm[2,2]/sum(gb.cm[,2])
 round(gb.recall,3)
 gb.precision <- gb.cm[2,2] / sum(gb.cm[2,]) # positive prediction, precision
@@ -662,7 +682,7 @@ gb.f1 <- (2*gb.recall*gb.precision)/(gb.recall + gb.precision)
 gb.f1
 ```
 
-```{r, include = F}
+```toml
 # extreme gradient boosting result
 colnames(dtest) <- NULL
 pred<- predict(xgb.tuned$finalModel, dtest)
@@ -674,7 +694,7 @@ xgb.cm
 ```
 
 
-```{r, include = F}
+```toml
 xgb.recall <- xgb.cm[2,2]/sum(xgb.cm[,2])
 round(xgb.recall,3)
 xgb.precision <- xgb.cm[2,2] / sum(xgb.cm[2,]) # positive prediction, precision
@@ -727,7 +747,7 @@ The miclassification error is about 0.143. The confusion matrix is shown below.
 |$\hat{Y}=1$|  5    |   35  |
 
 
-```{r, include = F}
+```toml
 combined.res <- data.frame(cbind(as.character(logit.pred), 
                                  as.character(fit.rf.final.pred), 
                                  as.character(pred.gbm), 
@@ -747,7 +767,7 @@ ensembled_error <- mean(ensemble.pred != data.test$AD)
 ensembled_error 
 ```
 
-```{r, include = F}
+```toml
 ensemble.cm  <- table(ensemble.pred, data.test$AD)
 ensemble.cm
 ensemble.recall <- ensemble.cm[2,2]/sum(ensemble.cm[,2])
@@ -803,7 +823,7 @@ Fulton, L.V.; Dolezel, D.; Harrop, J.; Yan, Y.; Fulton, C.P. Classification of A
 Knight Alzheimer Disease Research Center, CDR Scoring Table: https://knightadrc.wustl.edu/professionals-clinicians/cdr-dementia-staging-instrument/cdr-scoring-table/
 
 
-```{r, include = F}
+```toml
 # logit val
 logit.val.prob <- predict(fit.logit.final,data.test,type = "response")
 logit.val.pred <- as.factor(ifelse(logit.val.prob > 1/2, 1, 0))
@@ -835,7 +855,7 @@ val.res$ensemble <- as.numeric(val.res$ensemble)
 
 
 
-```{r, include = F}
+```toml
 # validation result
 ensemble.val.pred <- val.res$ensemble
 ensembled.val.error <- mean(ensemble.val.pred != data.val$AD)
