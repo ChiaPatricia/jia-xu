@@ -1,5 +1,5 @@
 ---
-title: "Jia Xu, 徐嘉"
+title: "Hi, my name is Jia Xu (徐嘉). Nice to meet you."
 subtitle: "Welcome to my personal Website! "
 description: "I'm currently a graduate student at University of Pennsylvania, studying data analytics in social policy."
 date: 2022-07-31T12:27:33-06:00
