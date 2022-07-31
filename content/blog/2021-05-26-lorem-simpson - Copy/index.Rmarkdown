@@ -19,7 +19,6 @@ layout: single
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
-dplyr::glimpse(penguins)
 ```
 
 ```{r}
