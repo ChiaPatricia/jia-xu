@@ -527,7 +527,7 @@ We use the grid search method which iterates over many possible combinations of 
 
 In the case of gradient boosting, the `distribution` is set to be `multinomial`. We then look at 135 models with various combinations of learning rate, tree numbers, tree depth and minimum number of observations in the end node. We apply 10-fold cross validation and record the minimum cross validated error for each of the model. 
 
-```{r, eval = F, include = F}
+```toml
 ## DO NOT RUNNNNNNNNN THIS CHUNKKKKK
 ## Gradient Boosting
 # hyper_grid <- expand.grid(shrinkage = c(.0075, .01, .0125, .015, .0175),
