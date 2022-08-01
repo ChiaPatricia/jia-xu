@@ -182,7 +182,7 @@ summary(data)
 
 Below, we provide a summary statistic table for the numerical variables in our dataset.
 
-```{r, echo = F}
+```toml
 num_summary <- data %>%
   get_summary_stats(
     Age, EDUC, SES, MMSE, eTIV, nWBV, ASF,
@@ -198,7 +198,7 @@ In this section, we create several visualizations to investigate the distributio
 
 First, we are interested in the demographic distribution. A histogram of age by gender showcases that the distributions of age and gender are roughly balanced. In addition, we notice that the age of subjects tends to be high. Most subjects are aged between 70 to 80 years old. Thus, the data deals mainly with elderly patients.
 
-```{r echo = F, message = F, warning = F, fig.height = 3, fig.width = 5}
+```toml
 ggplot(data = data, aes(x=Age, color = Gender)) +
   geom_histogram(position=position_dodge2(preserve="single"), 
                  aes(fill = Gender, y = ..density..),
@@ -216,7 +216,7 @@ Next, we visualize the relationship between Mini Mental State Exam score, Age an
 
 We see that subjects with AD tend to have lower MMSE score. There are two subjects with very low MMSE score (loewer than 10), and both of them are diagnosed as AD. However, there is no clear relationship between age and AD in this plot. Age and MMSE score does not have a clear association either, as seen in the right marginal plot.
 
-```{r echo = F, fig.height = 3, fig.width = 5}
+```toml
 g <- data %>% 
   ggplot(aes(x = MMSE,y = Age, color = AD)) +
   geom_jitter(alpha = 0.7) +
@@ -232,7 +232,7 @@ ggMarginal(g, type = "densigram",groupFill = TRUE)
 We dive deeper into the relationship between MMSE score and AD diagnosis. From the box plot below, we can see that those who are diagnosed with AD have a lower MMSE score in general. The median (the middle horizontal line of the box plot) and mean (marked by the square) are both significantly lower for the AD group.
 
 
-```{r, echo = F}
+```toml
 data %>%
   ggplot(aes(x=AD, y=MMSE, color = AD)) +
   geom_boxplot(size = 1.5) +
@@ -247,7 +247,7 @@ data %>%
 
 We also notice that the estimated total intracranial volume (eTIV) differ between dementia and non-dementia group. People with dementia tend to have a lower eTIV value.
 
-```{r, echo = F}
+```toml
 data %>%
   ggplot(aes(x=AD, y=nWBV, color = AD)) +
   geom_boxplot(size = 1.5) +
@@ -264,7 +264,7 @@ data %>%
 
 Lastly, we plot the correlation between numerical variables of our dataset. ASF and eTIV have very high negative correlation. nWBV and Age also have a relatively high negative correlation. We choose to keep all these variables for the modeling part. In fact, ASF does not turn out to be significant in any of the models, but eTIV does have some significance.
 
-```{r, echo = F}
+```toml
 data_sel <- data %>% select(-ID, -Gender, -AD)
 data_cor <- round(cor(data_sel),3)
 ggcorrplot(data_cor, method = "circle", 
@@ -306,7 +306,7 @@ We first fit a logistic classification model. We select a sparse model by using 
 
 The plot below shows how the deviance varies with different values of $\lambda$ and the number of non-zero coefficients.
 
-```{r, echo = F}
+```toml
 X <- model.matrix(AD~., data.train)[,-1]
 Y <- data.train[,length(data.train)]
 set.seed(10)
@@ -348,26 +348,26 @@ summary(fit.logit.final)
 ### Analysis
 
 Based on the summary table of the model, the logit function is given by:
-$$
+
 \begin{split}
 logit(P(AD=1 \mid Gender, MMSE, nWBV)) 
 &= log(\frac{P(AD=1 \mid Gender, MMSE, nWBV)}{P(AD=0 \mid Gender, MMSE, nWBV)}) \nonumber\\
 &= 36.38 + 0.82 \cdot Gender(Male) - 0.95 \cdot MMSE - 14.11 \cdot nWBV
 \end{split}
-$$
+
 
 where
-$$
+
 \begin{split}
 P(AD=1 \mid Gender, MMSE, nWBV) = \frac{exp(36.38 + 0.82 \cdot Gender(Male) - 0.95 \cdot MMSE - 14.11 \cdot nWBV)}{1 + exp(36.38 + 0.82 \cdot Gender(Male) - 0.95 \cdot MMSE - 14.11 \cdot nWBV)}
 \end{split}
-$$
+
 
 Here, we will assume that it costs equally to mislabel a subject to be AD as it does to mislabel a non-AD. Thus, we will set the threshold to be 0.5. That is, 
 
-$$
+
 \hat{AD} = 1 \text{ if  } \hat P(AD=1 \mid Gender, MMSE, nWBV) > 0.5
-$$
+
 
 
 ```toml
@@ -420,7 +420,7 @@ The second model that we build is a random forest model. We first set `mtry` (nu
 
 By plotting the error rate v.s number of trees, we decide to use 300 trees in order to settle down the OOB testing errors.
 
-```{r, echo = F}
+```toml
 set.seed(1)
 fit.rf <- randomForest(AD~., data.train, mtry = 3, 
                     ntree = 500)
@@ -431,7 +431,7 @@ legend("topright", colnames(fit.rf$err.rate), col=1:3, cex=0.8, fill=1:3)
  
 Then, by setting `ntree=300`, we want to compare effects of different `mtry`. Thus, we loop `mtry` from 1 to 10 and return the testing OOB errors for each of the model. In the end, we decide to use `mtry=2` which gives the minimum error rate.
 
-```{r, echo = F}
+```toml
 set.seed(3)
 rf.error <- 1:10  
 for (p in 1:10)  
@@ -503,7 +503,7 @@ The plot below demonstrates the distribution of minimal depth among all the tree
 
 We can see that MMSE and nWBV are more likely to be the root of the tree compared to other variables. The average minimal depths of MMSE and nWBV are around 1.5, suggesting that many dementia observations can be separated effectively on the basis of these two variables.
 
-```{r, echo = F}
+```toml
 # min_depth <- min_depth_distribution(fit.rf.final)
 # save(min_depth, file = "RData/min_depth.rda")
 load("RData/min_depth.rda")
@@ -610,7 +610,7 @@ xgb.cv.result <- xgb.cv(data=dtrain, params = params, nrounds = 500,
 ```
 
 
-```{r, eval = F, include = F}
+```toml
 ## DO NOT RUNNNNNNNNN
 # set.seed(1)
 # # ntrees = xgb.cv.result$best_iteration
@@ -710,7 +710,7 @@ xgb.f1
 ### Findings
 
 Below, the table shows the top 5 important features in the Extreme Gradient Boosting model.
-```{r, echo = F}
+```toml
 xgb.top5 <- head(xgb.importance(model=xgb.tuned$finalModel),5) %>% select(-Cover)
 knitr::kable(xgb.top5)
 ```
@@ -720,7 +720,7 @@ The `gain` measures the contribution of the feature to the model. We can see tha
 
 We also create a SHAP (SHapley Additive exPlanation) visualization plot for the Extreme Gradient Boosting model. The SHAP value demonstrates the contribution of each feature value to the prediction of dementia. We can see that high values of Mini Mental State exam score, low values of normalized whole brain volume, and low values of estimated total intracranial volume have significant impacts on the prediction of dementia.
 
-```{r, echo = F}
+```toml
 X_train <- select(data.train, -AD) %>% data.matrix
 X_train[,1] <- ifelse(X_train[,1] ==1, 1, 0)
 colnames(X_train)[1] <- "GenderM"
@@ -731,7 +731,7 @@ shap.plot.summary.wrap2(shap_values$shap_score, X_train)
 
 We now display the first tree in the Extreme Gradient Boosting model. We see that the first cut is based on MMSE and the second cut is based on nWBV. Age and eTIV appear in subsequent cuts. This roughly corresponds to the feature importance analysis above. 
 
-```{r, echo = F}
+```toml
 xgb.plot.tree(model = xgb.tuned$finalModel, trees = 1)
 ```
 
@@ -783,7 +783,7 @@ ensemble.f1
 
 We now compare the testing error and the F1 score of these five models.
 
-```{r, echo = F}
+```toml
 res.comp <- data.frame(
   Model = c("Logistic Model", "Random Rorest",  "Gradient Boosting Machine", "Extreme Gradient Boosting", "Ensemble Model"),
   `Test Error` = round(c(logit.error, fit.rf.test.err, gbm.error ,xgb.error, ensembled_error),3),
@@ -872,7 +872,7 @@ fdr <- val.cm[2,1] / sum(val.cm[2,])
 fdr
 ```
 
-```{r, include = F, eval = F}
+```toml
 combined.res <- data.frame(cbind(as.character(logit.pred), 
                                  as.character(fit.rf.final.pred), 
                                  as.character(pred.gbm), 
@@ -887,7 +887,7 @@ legend("bottomright", c(paste0("AUC = ", round(logit.roc$auc,2))),
        col = c("red"))
 ```
  
-```{r, include = F, eval = F}
+```toml
 fit.rf.final.roc <- roc(data.test$AD, fit.rf.final.prob[,2])
 plot(1-fit.rf.final.roc$specificities, fit.rf.final.roc$sensitivities, 
      col = "red", lwd = 3, type = "l",
@@ -898,7 +898,7 @@ legend("bottomright", c(paste0("AUC = ", round(fit.rf.final.roc$auc,2))),
        col = c("red"))
 ```
  
-```{r, include = F, eval = F}
+```toml
 fit.gbm.final.roc <- roc(data.test$AD, fit.rf.final.prob[,2])
 plot(1-fit.rf.final.roc$specificities, fit.rf.final.roc$sensitivities, 
      col = "red", lwd = 3, type = "l",
