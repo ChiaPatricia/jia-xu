@@ -17,7 +17,7 @@ layout: single
 
 
 
-![Tachyons Logo Script](AD.png)
+![Tachyons Logo Script](featured-hex.png)
 
 ### [Github](https://github.com/ChiaPatricia/Alzheimer-s-Disease-Classification) 
 ### [Data Science Live](https://jh-cai.com/modern-data-mining/dsl5.html)
@@ -390,7 +390,7 @@ Using the testing dataset to evaluate the performance of this model, the misclas
 
 This model has a sensitivity rate of 0.744 and a specificity rate of 0.854.
 
-```{r, include=F}
+```toml
 logit.recall <- logit.cm[2,2]/sum(logit.cm[,2])
 round(logit.recall,3) # sensitivity, recall
 specificity <- logit.cm[1,1]/sum(logit.cm[,1])
