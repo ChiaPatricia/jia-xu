@@ -1,8 +1,8 @@
 ---
-title: Talks that Last
+title: Courses I've Taken
 description: |
-  This is a list for your talks, workshops, or other events with a time, date, and place.
-author: "The R Markdown Team @RStudio"
+  This is a list for my previous data science and machine learning courses which helped me develop the mindset to work like a data scientist / data analyst, and follow a methodology to tackle different types of data science problems. 
+author: "Jia Xu"
 show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
@@ -14,13 +14,10 @@ layout: list # list, list-sidebar
 sidebar: 
   title: Talks that Last
   description: |
-    This is a list for your talks, workshops, or 
-    other events with a time, date, and place. 
-    Even this sidebar offers a ton of customizations.
+    This is a list for my previous data science and machine learning courses which helped me develop the mindset to work like a data scientist / data analyst, and follow a methodology to tackle different types of data science problems. 
     
-    Check out the _index.md file in the /talk folder 
-    to edit this content. 
-  author: "The R Markdown Team @RStudio"
+    
+  author: "Jia Xu"
   text_link_label: Subscribe via RSS
   text_link_url: /talk/index.xml
   show_sidebar_adunit: false # show ad container

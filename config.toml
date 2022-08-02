@@ -33,7 +33,7 @@ enableEmoji = true
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/favicon.ico"
   logo = "/img/blogophonic-mark-dark.png"
-  mainSections = ["project", "blog", "courses", "interest"] ###
+  mainSections = ["project", "blog", "courses", "interest","talks"] ###
   navallcaps = true
   # show/hide social icons in site header & footer
   # configure social icons and links below in [[params.social]]
@@ -100,7 +100,7 @@ enableEmoji = true
   tag = "tags"
 
 [permalinks]
-  courses = "/talk/:filename/"
+  courses = "/talks/:filename/"
   interest = "/blog/:filename/"
   
 [menu]
@@ -124,14 +124,14 @@ enableEmoji = true
   [[menu.header]]
     name = "Courses"
     title = "Courses I have taken"
-    url = "/courses/"
+    url = "/talk/"
     weight = 4
   [[menu.header]]
     name = "Interest"
     title = "My personal interest"
     url = "/interest/"
     weight = 5
-    
+
   # Configure footer  
   [[menu.footer]]
     name = "License"
