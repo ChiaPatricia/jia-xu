@@ -21,7 +21,7 @@ links:
 
 
 
-![Wharton Customer Analytics Fulton Bank Datathon](featured_hex.jpg)
+![Wharton Customer Analytics Fulton Bank Datathon](featured-hex.jpg)
 
 ## [Wharton Customer Analytics]](https://wca.wharton.upenn.edu/students/student-datathons/) connect industry with researchers and students with the goal of innovating the field of data analytics, fostering new relationships and creating dynamic thought leadership. This unique datathon experience was composed of teams made up of both Fulton Bank employees and Penn students challenged with developing insights and recommendations for Fulton Bank using their data around selected business challenges in Consumer and Small Business, Fulton Financial Advisors, Information Technology, Marketing, and Risk Management.
 
