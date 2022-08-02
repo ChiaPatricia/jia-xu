@@ -1,7 +1,7 @@
 ---
 title: "About"
 description: |
-  A Hugo theme made for R Markdown users.
+  Currently I'm a second year (final year) graduate student at the University of Pennsylvania, studying Data Analytics in Social Policy, and also a research assistant at Shen Lab, Perelman School of Medicine. 
 show_header: true
 sidebar_left: false
 # Keep this! Do not edit.

@@ -99,27 +99,38 @@ enableEmoji = true
   series = "series"
   tag = "tags"
 
+[permalinks]
+  courses = "/talk/:filename/"
+  interest = "/blog/:filename/"
+  
 [menu]
   [[menu.header]]
     name = "About"
     title = "About Blogophonic"
     url = "/about/"
     weight = 1
-  [[menu.header]]
-    name = "Blog"
-    title = "Blog"
-    url = "/blog/"
-    weight = 2
+    
   [[menu.header]]
     name = "Projects"
-    title = "Project Portfolio"
+    title = "My project portfolio"
     url = "/project/"
+    weight = 2
+    
+  [[menu.header]]
+    name = "Blog"
+    title = "My blog"
+    url = "/blog/"
     weight = 3
   [[menu.header]]
-    name = "Talks"
-    title = "Talks"
-    url = "/talk/"
+    name = "Courses"
+    title = "Courses I have taken"
+    url = "/courses/"
     weight = 4
+  [[menu.header]]
+    name = "Interest"
+    title = "My personal interest"
+    url = "/interest/"
+    weight = 5
     
   # Configure footer  
   [[menu.footer]]
@@ -132,6 +143,13 @@ enableEmoji = true
     title = "Contact form"
     url = "/contact/"
     weight = 2
+# Rename the url: Your next option is to actually change the url. 
+# You can use [permalinks] in your config.toml file:    
+
+# Here, :filename is a variable, minus the file extension. You could also use :title or :slug, for example. 
+# Read more about permalinks and variables in the Hugo docs.
+# Changing permalinks will only change the url a visitor sees- not your underlying folder structure. 
+# The url for the content section will now be */portfolio/, so you would want to also update your menu:
 
 # see https://gohugo.io/about/hugo-and-gdpr/    
 [privacy]

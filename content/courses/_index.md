@@ -1,7 +1,7 @@
 ---
 title: Courses I've taken so far
 description: |
-  This is a list for your talks, workshops, or other events with a time, date, and place.
+  This is a list for my previous data science and machine learning courses which helped me develop the mindset to work like a data scientist / data analyst, and follow a methodology to tackle different types of data science problems. 
 author: "Jia Xu"
 show_post_thumbnail: true
 show_author_byline: true
@@ -9,6 +9,7 @@ show_post_date: true
 show_post_time: true
 # for listing page layout
 layout: list # list, list-sidebar
+type: talk
 
 # for list-sidebar layout
 sidebar: 
@@ -23,9 +24,8 @@ sidebar:
   text_link_url: /talk/index.xml
   show_sidebar_adunit: false # show ad container
 
-type: talk
-cascade:
-  type: talk
+
+
   
 # set up common front matter for all pages inside blog/
 cascade:
@@ -39,6 +39,10 @@ cascade:
     text_link_label: View recent talks
     text_link_url: /talk/
     show_sidebar_adunit: false # show ad container
+  
+type: project
+cascade:
+  type: project
 ---
 
 ** No content below YAML for the talk _index. This file provides front matter for the listing page layout and sidebar content. It is also a branch bundle, and all settings under `cascade` provide front matter for all pages inside talk/. You may still override any of these by changing them in a page's front matter.**
