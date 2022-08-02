@@ -8,9 +8,9 @@ draft: false
 tags:
   - hugo-site
 categories:
-  - Theme Features
+  - Machine Learning
   - R
-  - package
+  - Alzheimer's Disease
 # layout options: single or single-sidebar
 layout: single
 ---

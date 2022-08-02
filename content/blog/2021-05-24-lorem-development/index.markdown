@@ -1,78 +1,33 @@
 ---
-title: "Lorem Arrested Development"
-subtitle: "How to add panelsets in R Markdown posts."
+title: "Simplified analysis of MHD flow in a porous surrounding bounded by an oscillating vertical cylindrical surface"
+subtitle: "Case Studies in Thermal Engineering."
 excerpt: "Add tabbed sections with code and results."
-date: 2021-05-24
-author: "Alison Hill"
+date: 2022-02-01
+author: "Yunyun Wu, Jia Xu"
 draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:
-- evergreen
+- MATLAB
+- Simulation Study
 ---
 
-{{< here >}}
+![MHD](featured.jpg)
+### Abstract
+This study developed the relatively simple mathematical model by adding a radiation effect and transverse magnetic field to the physical model, taking into account heat and mass transfer of a permeable, saturated porous medium, infinite oscillating cylindrical plate. In comparison, magnetohydrodynamics reality flow pattern in most earlier works was ignored in porous media. We have performed a semi-analytical method for numerical inverse Laplace transformation into PDEs of radiation on Newtonian fluids’ heat and mass transfer. The numerical stability method is used to analyze the influence of parameter variation for different values of M and N. We took into account both the local flow velocity distribution and concentration profile with the effect of Sc and time t and the skin friction against time t. There are several variations examined between the heat transfer under the cylinder boundary conditions and the plane boundary conditions. The findings given by empirical and numerical approaches are in good agreement. As seen in the literature, the numerical results on the local flow velocity agree closely with the solutions available. Our observations, meanwhile, show that the rate of heat transfer can be boosted using a magnetic field. The curved surface of the boundary configuration will restrain velocity and the temperature rise, while it has little effect on the mass transfer rate.
 
-## But first, panelsets with R code chunks
+### Keywords
+MHD; Porous regime; Radiation; Laplace transformation
 
-{{< panelset class="greetings" >}}
-{{< panel name="Plot" >}}
+### Published Journal
+[Case Studies in Thermal Engineering](https://www.sciencedirect.com/journal/case-studies-in-thermal-engineering) (SCI-Q1, Impact Factor: 6.268)
 
-<img src="{{< blogdown/postref >}}index_files/figure-html/plot-1.png" width="672" />
-
-{{< /panel >}}
-{{< panel name="Code" >}}
-
-
-```r
-plot(pressure)
-```
-
-{{< /panel >}}
-{{< /panelset  >}}
-
-## I'm half machine. I'm a monster.
-
-It's a hug, Michael. I'm hugging you. I'm half machine. I'm a monster. There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. Bad news. Andy Griffith turned us down. He didn't like his trailer.
-
-No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide. Guy's a pro. Really? __Did nothing cancel?__ *Get me a vodka rocks.* And a piece of toast.
-
-## No… but I'd like to be asked!
-
-Oh, you're gonna be in a coma, all right. Steve Holt! I hear the jury's still out on science. No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.
-
-1. Really? Did nothing cancel?
-2. That's what it said on 'Ask Jeeves.'
-3. Get me a vodka rocks. And a piece of toast.
-
-### That's what it said on 'Ask Jeeves.'
-
-Did you enjoy your meal, Mom? You drank it fast enough. What's Spanish for "I know you speak English?" Bad news. Andy Griffith turned us down. He didn't like his trailer. Really? Did nothing cancel? I care deeply for nature.
-
-* Michael!
-* No! I was ashamed to be SEEN with you. I like being with you.
-* We just call it a sausage.
-
-Well, what do you expect, mother? It's called 'taking advantage.' It's what gets you ahead in life. Now, when you do this without getting punched in the chest, you'll have more fun. No, I did not kill Kitty. However, I am going to oblige and answer the nice officer's questions because I am an honest man with no secrets to hide.
-
-I'm half machine. I'm a monster. It's a hug, Michael. I'm hugging you. Guy's a pro. First place chick is hot, but has an attitude, doesn't date magicians. He'll want to use your yacht, and I don't want this thing smelling like fish.
-
-He'll want to use your yacht, and I don't want this thing smelling like fish. Now, when you do this without getting punched in the chest, you'll have more fun. We just call it a sausage. Guy's a pro. Bad news. Andy Griffith turned us down. He didn't like his trailer.
-
-There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. It's called 'taking advantage.' It's what gets you ahead in life. We just call it a sausage.
-
-Michael! First place chick is hot, but has an attitude, doesn't date magicians. I've opened a door here that I regret. Guy's a pro.
-
-Army had half a day. Michael! Now, when you do this without getting punched in the chest, you'll have more fun. Well, what do you expect, mother? Now, when you do this without getting punched in the chest, you'll have more fun.
-
-But I bought a yearbook ad from you, doesn't that mean anything anymore? Oh, you're gonna be in a coma, all right. It's a hug, Michael. I'm hugging you. I've opened a door here that I regret.
-
-There's only one man I've ever called a coward, and that's Brian Doyle Murray. No, what I'm calling you is a television actor. That's why you always leave a note! He'll want to use your yacht, and I don't want this thing smelling like fish.
-
-I've opened a door here that I regret. Now, when you do this without getting punched in the chest, you'll have more fun. I care deeply for nature. It's called 'taking advantage.' It's what gets you ahead in life.
-
-It's a hug, Michael. I'm hugging you. No… but I'd like to be asked! What's Spanish for "I know you speak English?" It's called 'taking advantage.' It's what gets you ahead in life. It's a hug, Michael. I'm hugging you.
-
-I don't understand the question, and I won't respond to it. Really? Did nothing cancel? Did you enjoy your meal, Mom? You drank it fast enough. Bad news. Andy Griffith turned us down. He didn't like his trailer.
-
-
+### Citation
+Yunyun Wu, Jia Xu,
+Simplified analysis of MHD flow in a porous surrounding bounded by an oscillating vertical cylindrical surface,
+Case Studies in Thermal Engineering,
+Volume 30,
+2022,
+101737,
+ISSN 2214-157X,
+https://doi.org/10.1016/j.csite.2021.101737.

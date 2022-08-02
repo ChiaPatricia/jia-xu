@@ -117,7 +117,7 @@ enableEmoji = true
     weight = 2
     
   [[menu.header]]
-    name = "Blog"
+    name = "Papers"
     title = "My blog"
     url = "/blog/"
     weight = 3
