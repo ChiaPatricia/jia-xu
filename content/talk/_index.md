@@ -3,7 +3,7 @@ title: Courses I've Taken
 description: |
   This is a list for my previous data science and machine learning courses which helped me develop the mindset to work like a data scientist / data analyst, and follow a methodology to tackle different types of data science problems. 
 author: "Jia Xu"
-show_post_thumbnail: true
+show_post_thumbnail: false
 show_author_byline: true
 show_post_date: true
 show_post_time: true
