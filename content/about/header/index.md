@@ -8,3 +8,25 @@ headline: |
 
 <!-- this is a subheadline -->
 Passionate about Data Science and Analytics. Actively looking for data analyst/scientist roles. Inspired by real-world tough problems.
+
+[menu]
+  [[menu.header]]
+    name = "Projects"
+    title = "My project portfolio"
+    url = "/project/"
+    weight = 1
+  [[menu.header]]
+    name = "Blog"
+    title = "My blog"
+    url = "/blog/"
+    weight = 2
+  [[menu.header]]
+    name = "Courses"
+    title = "Courses I have taken"
+    url = "/courses/"
+    weight = 3
+  [[menu.header]]
+    name = "Interest"
+    title = "My personal interest"
+    url = "/interest/"
+    weight = 4
