@@ -23,9 +23,14 @@ links:
   name: code
   url: https://github.com/ChiaPatricia/Predicting-Air-Quality-Index-in-India
 ---
+![fig](featured-hex.png)
 
-	• Air pollution has become one of the largest environmental health threats around the globe. India is among one of the most polluted countries in the world. According to the 2021 World Air Quality Report, 12 out of 15 most polluted regional cities are in India.
+Air pollution has become one of the largest environmental health threats around the globe. India is among one of the most polluted countries in the world. According to the 2021 World Air Quality Report, 12 out of 15 most polluted regional cities are in India.
 	
-	• We implemented various models, including the Linear regression model, Gradient Boosting Regression, Neural Network, and SARIMA time series prediction model, for the AQI index at the station level to predict and evaluate the air quality index in India.
 	
-	• Involvement: Performed the exploratory data analysis, and data visualization using Plotly for state and city level analysis, built and evaluated the Gradient Boosting Regression and Neural Network models that predict the Air Quality Index in India, and came up with findings in spatial pattern, temporal pattern, and feature importance.
+We implemented various models, including the Linear regression model, Gradient Boosting Regression, Neural Network, and SARIMA time series prediction model, for the AQI index at the station level to predict and evaluate the air quality index in India.
+	
+
+
+### Involvement
+Performed the exploratory data analysis, and data visualization using Plotly for state and city level analysis, built and evaluated the Gradient Boosting Regression and Neural Network models that predict the Air Quality Index in India, and came up with findings in spatial pattern, temporal pattern, and feature importance.
