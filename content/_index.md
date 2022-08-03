@@ -1,10 +1,10 @@
 ---
-title: "Hi, my name is Jia Xu (徐嘉). Nice to meet you."
+title: "Jia Xu"
 subtitle: "Welcome to my personal Website! "
-description: "I'm currently a graduate student at University of Pennsylvania, studying data analytics in social policy."
-date: 2022-07-31T12:27:33-06:00
+description: "Hi, my name is Jia Xu (徐嘉). Currently, I'm a graduate student at University of Pennsylvania, studying data analytics in social policy and a research assistant at [Shen Lab](https://www.med.upenn.edu/shenlab/). My current work mainly focuses on data science."
+date: 2022-08-03T12:27:33-06:00
 images:
-  - img/unicorn-megaphone.png
+  - img/jia.jpg
 image_left: false
 text_align_left: true
 show_social_links: true # specify social accounts in site config

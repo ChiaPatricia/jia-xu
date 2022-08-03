@@ -32,7 +32,7 @@ enableEmoji = true
   orgLocal = "Philly"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/rabbit.svg"
-  logo = "/img/kirby_pixel.png"
+  logo = "/img/rabbit.svg"
   mainSections = ["project", "blog", "courses", "interest","talks"] ###
   navallcaps = true
   # show/hide social icons in site header & footer
