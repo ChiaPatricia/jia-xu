@@ -31,8 +31,8 @@ enableEmoji = true
   orgName = "University of Pennsylvania"
   orgLocal = "Philly"
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
-  favicon = "/img/rabbit.svg"
-  logo = "/img/rabbit.svg"
+  favicon = "/img/magic.png"
+  logo = "/img/magic.png"
   mainSections = ["project", "blog", "courses", "interest","talks"] ###
   navallcaps = true
   # show/hide social icons in site header & footer
