@@ -8,12 +8,12 @@ show_audio_link: true
 audio_link_label: "How to say my name"
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
-- name: Photography
-  url: https://jiaxu.netlify.app/interest/
-- name: Fitness: Arms & Abs, Cardio Kickboxing, Badminton 
-  url: https://jiaxu.netlify.app/interest/
-- name: Food 
-  url: https://jiaxu.netlify.app/interest/
+- name: Paris
+  url: https://en.wikipedia.org/wiki/Paris
+- name: Pastries
+  url: https://en.wikipedia.org/wiki/Pastry
+- name: People
+  url: https://en.wikipedia.org/wiki/People
 ---
 
 ** index doesn't contain a body, just front matter above.
