@@ -10,9 +10,9 @@ link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: Photography
   url: https://jiaxu.netlify.app/interest/
-- name: Fitness: Arms & Abs, Cardio Kickboxing, Badminton (即使在最黑的夜，也要有最热的血)
+- name: Fitness: Arms & Abs, Cardio Kickboxing, Badminton 
   url: https://jiaxu.netlify.app/interest/
-- name: Food (芝士就是力量)
+- name: Food 
   url: https://jiaxu.netlify.app/interest/
 ---
 
