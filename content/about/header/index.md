@@ -3,7 +3,7 @@
 text_align_right: false
 show_title_as_headline: false
 headline: |
-  ℍ𝕚, 𝕟𝕚𝕔𝕖 𝕥𝕠 𝕞𝕖𝕖𝕥 𝕪𝕠𝕦!
+  ℍ𝕚, 𝕟𝕚𝕔𝕖 𝕥𝕠 𝕞𝕖𝕖𝕥  𝕪𝕠𝕦!
 ---
 
 <!-- this is a subheadline -->
@@ -17,7 +17,7 @@ Currently I'm also a research assistant at [Shen Lab, Perelman School of Medicin
 Learn more about my project interests in projects.
 
 
-![grad](mortarboard.png) M.S. Data Analytics in Social Policy ∙ University of Pennsylvania ∙ 2023
+![grad](/img/mortarboard.png) M.S. Data Analytics in Social Policy ∙ University of Pennsylvania ∙ 2023
 
-![grad](mortarboard.png) B.S. in Mathematics and Applied Mathematics ∙ Nanjing University of Finance and Economics ∙ 2021
+![grad](/img/mortarboard.png) B.S. in Mathematics and Applied Mathematics ∙ Nanjing University of Finance and Economics ∙ 2021
 
