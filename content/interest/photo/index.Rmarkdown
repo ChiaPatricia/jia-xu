@@ -1,0 +1,31 @@
+---
+title: "Photography"
+subtitle: "“Photography is an austere and blazing poetry of the real.” – Ansel Adams."
+excerpt: "一张好照片，就像一条好的猎犬，默不作声，但又意味深长。"
+date: 2022-07-30
+author: "Jia Xu"
+draft: false
+# layout options: single, single-sidebar
+layout: single
+categories:
+- interests
+---
+
+![1](1.jpg)
+
+
+![2](2.jpg)
+
+![3](3.jpg)
+
+![4](4.jpg)
+
+![5](5.jpg)
+
+![6](6.jpg)
+
+![7](7.jpg)
+
+![8](8.jpg)
+
+![9](9.jpg)
