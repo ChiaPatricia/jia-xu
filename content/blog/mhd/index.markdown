@@ -1,7 +1,7 @@
 ---
 title: "Simplified analysis of MHD flow in a porous surrounding bounded by an oscillating vertical cylindrical surface"
 subtitle: "Case Studies in Thermal Engineering."
-excerpt: "Add tabbed sections with code and results."
+excerpt: "This study developed the relatively simple mathematical model by adding a radiation effect and transverse magnetic field to the physical model, taking into account heat and mass transfer of a permeable, saturated porous medium, infinite oscillating cylindrical plate. "
 date: 2022-02-01
 author: "Yunyun Wu, Jia Xu"
 draft: false

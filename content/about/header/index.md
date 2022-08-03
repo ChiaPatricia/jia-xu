@@ -8,7 +8,7 @@ headline: |
 
 <!-- this is a subheadline -->
 
-My name is Jia Xu (Name in Chinese: 徐嘉). I was born in Wuxi, China and I'm Actively looking for data analyst/scientist full-time roles for new grad based in Shanghai / Suzhou / Beijing / Shenzhen / Wuxi.
+My name is Jia Xu (Name in Chinese: 徐嘉). I was born in Wuxi, China and I'm actively looking for data analyst/scientist full-time roles for new grad based in Shanghai / Suzhou / Beijing / Shenzhen / Wuxi.
 
 Currently I'm a second year (final year) graduate student at the University of Pennsylvania, studying Data Analytics in Social Policy, and also a research assistant at Shen Lab, Perelman School of Medicine.
 
