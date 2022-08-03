@@ -1,7 +1,7 @@
 ---
 title: "Predicting Air Quality Index in India"
-subtitle: ""
-excerpt: "This is my final project of the CIS 545 - Big Data Analysis in the Spring 2022 semester. We worked as a team to tackle this air pollution big data problem as air is what keeps humans alive. Monitoring it and understanding its quality is of immense importance to our well-being. At the end, we also won the "Best Visualization"" outstanding project among the whole class."
+subtitle: "CIS 545 Final Project"
+excerpt: "This is my final project of the CIS 545 - Big Data Analysis in the Spring 2022 semester. We worked as a team to tackle this air pollution big data problem as air is what keeps humans alive. Monitoring it and understanding its quality is of immense importance to our well-being. At the end, we also won the Best Visualization outstanding project among the whole class."
 date: 2022-04-20
 author: "Jia Xu, Yuqin Zhang, Yuluan Cao"
 draft: false
