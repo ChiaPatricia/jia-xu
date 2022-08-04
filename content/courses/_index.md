@@ -18,15 +18,15 @@ sidebar:
     This is a list for my previous data science and machine learning courses which helped me develop the mindset to work like a data scientist / data analyst, and follow a methodology to tackle different types of data science problems. 
 
   author: "Jia Xu"
-  text_link_label: Subscribe via RSS
-  text_link_url: /talk/index.xml ###
+  text_link_label: Subscribe via LinkedIn
+  text_link_url: https://www.linkedin.com/in/jia-xu-0578b919a/ ###
   show_sidebar_adunit: true # show ad container
 
 
   
 # set up common front matter for all pages inside blog/
 cascade:
-  author: "The R Markdown Team @RStudio"
+  author: "Jia Xu"
   show_author_byline: true
   show_post_date: true
   show_post_time: true
