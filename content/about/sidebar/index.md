@@ -9,11 +9,11 @@ audio_link_label: "How to say my name"
 link_list_label: "Interests" # bookmarks, elsewhere, etc.
 link_list:
 - name: Photography
-  url: https://en.wikipedia.org/wiki/Paris
+  url: https://luckyjiaxu.com/blog/photo/
 - name: Fitness
-  url: https://en.wikipedia.org/wiki/Pastry
+  url: https://luckyjiaxu.com/blog/fit/
 - name: Food
-  url: https://en.wikipedia.org/wiki/People
+  url: https://luckyjiaxu.com/blog/food/
 ---
 
 ** index doesn't contain a body, just front matter above.

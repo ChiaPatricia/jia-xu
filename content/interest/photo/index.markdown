@@ -1,6 +1,6 @@
 ---
 title: "Photography"
-subtitle: "“Photography is an austere and blazing poetry of the real.” – Ansel Adams."
+subtitle: "Photography is an austere and blazing poetry of the real. – Ansel Adams."
 excerpt: "一张好照片，就像一条好的猎犬，默不作声，但又意味深长。"
 date: 2022-07-30
 author: "Jia Xu"
@@ -11,6 +11,7 @@ categories:
 - interests
 ---
 
+Here are my favorite photos. Hope you enjoy!
 ![1](1.jpg)
 
 
