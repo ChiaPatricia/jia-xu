@@ -1,7 +1,7 @@
 ---
 title: "Foodie"
 subtitle: "Carbs might be my soulmate."
-excerpt: "曾经沧海难为水，鱼香肉丝配鸡腿."
+excerpt: "曾经沧海难为水，鱼香肉丝配鸡腿。"
 date: 2022-07-30
 author: "Jia Xu"
 draft: false
