@@ -14,9 +14,9 @@ I'm passionate about learning and applying data Science and analytics skills int
 
 Currently I'm also a research assistant at [Shen Lab, Perelman School of Medicine](https://www.med.upenn.edu/shenlab/) focusing on developing and applying data science methods for discovering actionable knowledge from complex biomedical and health data.
 
-![Resume](./Resume_Jia Xu.pdf)
+![Resume]("./Resume_Jia Xu.pdf"")
 
-![简历](./徐嘉_宾夕法尼亚大学_数据分析社会政策_简历.pdf)
+![简历]("./徐嘉_宾夕法尼亚大学_数据分析社会政策_简历.pdf")
 
 <img src="/img/mortarboard.png" alt="mortarboard" width="20"/> M.S. Data Analytics in Social Policy ∙ University of Pennsylvania ∙ 2023
 
