@@ -1,8 +1,8 @@
 ---
-title: My Personal Interest
+title: My Interest
 description: |
   Beyond data science, I'm also a photography, fitness and movie lover.
-author: "The R Markdown Team @RStudio"
+author: "Jia Xu"
 show_post_thumbnail: true
 show_author_byline: true
 show_post_date: true
@@ -17,15 +17,15 @@ sidebar:
     Beyond data science, I'm also a photography, fitness and movie lover.
     
   author: "Jia Xu"
-  text_link_label: Subscribe via RSS
-  text_link_url: /index.xml
+  #text_link_label: Subscribe via RSS
+  #text_link_url: /index.xml
   show_sidebar_adunit: false # show ad container
 
 
 
 # set up common front matter for all pages inside blog/
 cascade:
-  author: "The R Markdown Team @RStudio"
+  author: "Jia Xu"
   show_author_byline: true
   show_post_date: true
   show_disqus_comments: false # see disqusShortname in site config
