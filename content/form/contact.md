@@ -4,7 +4,7 @@ name: Contact
 description: "Want to contact me? Please send me a message"
 date: 2022-08-10T13:38:41-06:00
 draft: false
-url: https://formspree.io/f/xgeqeogw # contact
+url: contact
 type: form
 layout: split-right # split-right or split-left
 submit_button_label: Send Message
