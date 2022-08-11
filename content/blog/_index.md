@@ -16,8 +16,8 @@ sidebar:
     Here are the papers I've published so far.
    
   author: "Jia Xu"
-  text_link_label: Subscribe via RSS
-  text_link_url: /index.xml
+  text_link_label: Subscribe via Google Scholar
+  text_link_url: https://scholar.google.com/citations?hl=zh-CN&user=ZnNi2iMAAAAJ&view_op=list_works&citft=1&citft=2&citft=3&email_for_op=jiaxupatricia%40gmail.com&gmla=AJsN-F5WJ42zJ_YEXbe7uZiaM8FlZmiCnINs1PKflTr896ZF8mPndL6bTXbY1pby1gGdLnn8-roRl9gGupRqc6cqLowiKjOZZhJd7hcjPvYyxA6DFtj2_VhzASYCaTqjOKkVQeS1RCHpK0V0oyusBGJIiMjP_ByNtLNlazy1EfGi9UFIejLJgD9b0IPU8OgtlPbSvnqIl6vO6t7s4RBO0XDVeRrvCM3X73SgWvWqzTauxn2vbp0ULpyNdgHJK2aYbcYb1cziYoO5Zj0oqlZFJH2vgV4SqoirFg
   show_sidebar_adunit: false # show ad container
 
 # set up common front matter for all pages inside blog/

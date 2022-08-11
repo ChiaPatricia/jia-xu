@@ -17,8 +17,8 @@ sidebar:
     Beyond data science, I'm also a photography, fitness and food lover.
     
   author: "Jia Xu"
-  text_link_label: Subscribe via LinkedIn
-  text_link_url: https://www.linkedin.com/in/jia-xu-0578b919a/
+  text_link_label: Subscribe via Instagram
+  text_link_url: https://www.instagram.com/jiaxu306/
   show_sidebar_adunit: false # show ad container
 
 
