@@ -12,9 +12,9 @@ type: blog
 
 # for list-sidebar layout
 sidebar: 
-  title: My Personal Interest
+  title: My Interest
   description: |
-    Beyond data science, I'm also a photography, fitness and movie lover.
+    Beyond data science, I'm also a photography, fitness and food lover.
     
   author: "Jia Xu"
   text_link_label: Subscribe via LinkedIn

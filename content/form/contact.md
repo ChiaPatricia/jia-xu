@@ -1,7 +1,7 @@
 ---
 title: Contact
 name: Contact
-description: "Want to contact me? Please send me a message"
+description: "Want to contact me? Please send me a message."
 date: 2022-08-10T13:38:41-06:00
 draft: false
 url: contact
