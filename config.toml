@@ -28,8 +28,8 @@ enableEmoji = true
     style = "github"
     
 [params]
-  orgName = "University of Pennsylvania"
-  orgLocal = "Philly"
+  orgName = "Jia Xu"
+  orgLocal = ""
   description = "A modern, beautiful, and easily configurable blog theme for Hugo."
   favicon = "/img/magic.png"
   logo = "/img/magic.png"
