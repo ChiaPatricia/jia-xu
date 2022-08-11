@@ -6,8 +6,8 @@ date: 2022-08-03T12:27:33-06:00
 images:
   - img/jia3.jpg
 image_left: false
-fig_width: 7 ##
-fig_height: 7 ##
+fig_width: 5 ##
+fig_height: 5 ##
 text_align_left: false 
 show_social_links: true # specify social accounts in site config
 show_action_link: true 
