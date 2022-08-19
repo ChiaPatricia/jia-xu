@@ -15,7 +15,7 @@ I'm passionate about learning and applying data Science and analytics skills int
 Currently I'm also a research assistant at [Shen Lab, Perelman School of Medicine](https://www.med.upenn.edu/shenlab/) focusing on developing and applying data science methods for discovering actionable knowledge from complex biomedical and health data.
 
 
-[Click to Download Resume (In Chinese & English)](新简历.pdf)
+[Click to Download Resume (Chinese and English)](新简历.pdf)
 
 
 
