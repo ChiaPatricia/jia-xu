@@ -111,11 +111,11 @@ We summarized our annotation task in the table below.
 
 |  |  Annotation Task  |  Annotation Description  |
 |  ----  | ----  |  ----  |
-| 1 | Variable: Score | If the score is < 40, it is a fail, >= 40 and <=100, it is an pass, and if the student does not submit the assessment, no result is recorded. All null scores can be interpreted as non-submissions, so we will fill them out with zeros; null scores will be assigned as passe, as it is ok that most submissions do not fail. |
-| 2 | New Variable: Weighted score | How it will be calculated: \\ Multiply the weight of the assignment with its score. Aggregate the data frame per weight * score per module presentation with the sum function. Calculate the total recorded weight of the module calculate weighted scores - divide summed weight*score by total recorded weight of the module |
-| 3 | New Variable: Late submission | Calculate the rate of late submission for the assignments that the student did submit. How will be calculated: \\ Calculate the difference between the deadline and the actual submission date. Make a new column - if the difference between dates is more than that), the submission was late. Aggregate by student ID, module, and module presentation. |
-| 4 | Merge dataframes | $VLE + VLE materials = \text{total_click_per_student}.$   We can merge these two tables with an inner merge as resources with no activity for any student to provide zero information. We will drop week_from, week_to, and date columns. \\ $Registration Info + Courses + Student Info = regCoursesInfo.$ We will inner merge these three tables based on code_module, code_presentation, and id_student. \\ $Assessments + Results = assessments.$ We will inner merge these three tables based on id_assessment. |
-| 5 | Missing values | IMD band: Fill them according to the most frequent band for that region. \Date registration: For the withdrawn students, we will subtract the median value from the registration date to fill these. \\ total_click: We will  replace them with 0s (meaning not interested in it). \\ weighted_score: We will  replace the nan values with 0s (meaning do not make submissions). \\ late_rate: We will replace the nan values with 1.00 (100% late rate). \\ fail_rate: We will replace them with 100% (1.0) (meaning do not make any submissions).  |
+| 1 | Variable: Score | If the score is $< 40$, it is a fail, $>= 40 and <=100$, it is an pass, and if the student does not submit the assessment, no result is recorded. All null scores can be interpreted as non-submissions, so we will fill them out with zeros; null scores will be assigned as passe, as it is ok that most submissions do not fail. |
+| 2 | New Variable: Weighted score | How it will be calculated:  Multiply the weight of the assignment with its score. Aggregate the data frame per weight * score per module presentation with the sum function. Calculate the total recorded weight of the module calculate weighted scores - divide summed weight*score by total recorded weight of the module |
+| 3 | New Variable: Late submission | Calculate the rate of late submission for the assignments that the student did submit. How will be calculated:  Calculate the difference between the deadline and the actual submission date. Make a new column - if the difference between dates is more than that), the submission was late. Aggregate by student ID, module, and module presentation. |
+| 4 | Merge dataframes | $VLE + VLE materials = \text{total_click_per_student}.$   We can merge these two tables with an inner merge as resources with no activity for any student to provide zero information. We will drop week_from, week_to, and date columns.  $Registration Info + Courses + Student Info = regCoursesInfo.$ We will inner merge these three tables based on code_module, code_presentation, and id_student.  $Assessments + Results = assessments.$ We will inner merge these three tables based on id_assessment. |
+| 5 | Missing values | \textbf{IMD band}: Fill them according to the most frequent band for that region.  \textbf{Date registration}: For the withdrawn students, we will subtract the median value from the registration date to fill these.  \textbf{total_click}: We will  replace them with 0s (meaning not interested in it).  \textbf{weighted_score}: We will  replace the nan values with 0s (meaning do not make submissions).  \textbf{late_rate}: We will replace the nan values with 1.00 (100% late rate). \textbf{fail_rate}: We will replace them with 100% (1.0) (meaning do not make any submissions).  |
 | 6 | Drop columns | The is_banked column is dropped along with date_submitted and assessment_type.  |
 
 
@@ -145,17 +145,17 @@ In our models, the Decision Tree and Random Forest prediction models received re
 
 
 # References
-Bayer, V., Hlosta, M., & Fernandez, M. (2021, June). Learning Analytics and Fairness: Do 	Existing Algorithms Serve Everyone Equally?. In International Conference on 	Artificial Intelligence in Education (pp. 71-75). Springer, Cham.
+Bayer, V., Hlosta, M., & Fernandez, M. (2021, June). Learning Analytics and Fairness: Do Existing Algorithms Serve Everyone Equally?. In International Conference on Artificial Intelligence in Education (pp. 71-75). Springer, Cham.
 
-Canagareddy D., Subarayadu K., Hurbungs V. (2019) A Machine Learning Model to Predict 	the Performance of University Students. In: Fleming P., Lacquet B., Sanei S., Deb K., 	Jakobsson A. (eds) Smart and Sustainable Engineering for Next Generation 	Applications. ELECOM 2018. Lecture Notes in Electrical Engineering, vol 561. 	Springer, Cham. https://doi-org.proxy.library.upenn.edu/10.1007/978-3-030-18240-3_29
+Canagareddy D., Subarayadu K., Hurbungs V. (2019) A Machine Learning Model to Predict 	the Performance of University Students. In: Fleming P., Lacquet B., Sanei S., Deb K., Jakobsson A. (eds) Smart and Sustainable Engineering for Next Generation 	Applications. ELECOM 2018. Lecture Notes in Electrical Engineering, vol 561. 	Springer, Cham. https://doi-org.proxy.library.upenn.edu/10.1007/978-3-030-18240-3_29
 
-Chui, K. T., Liu, R. W., Zhao, M., & De Pablos, P. O. (2020). Predicting students’ performance 	with school and family tutoring using generative adversarial network-based deep 	support vector machine. IEEE Access, 8, 86745–86752. 	https://doi.org/10.1109/access.2020.2992869
+Chui, K. T., Liu, R. W., Zhao, M., & De Pablos, P. O. (2020). Predicting students’ performance with school and family tutoring using generative adversarial network-based deep support vector machine. IEEE Access, 8, 86745–86752. https://doi.org/10.1109/access.2020.2992869
 
-Dabhade, P., Agarwal, R., Alameen, K. P., Fathima, A. T., Sridharan, R., & Gopakumar, G. 	(2021). Educational data mining for predicting students’ academic performance 	using machine learning algorithms. Materials Today: Proceedings, 47, 5260–5267. 	https://doi.org/10.1016/j.matpr.2021.05.646
+Dabhade, P., Agarwal, R., Alameen, K. P., Fathima, A. T., Sridharan, R., & Gopakumar, G. 	(2021). Educational data mining for predicting students’ academic performance using machine learning algorithms. Materials Today: Proceedings, 47, 5260–5267. https://doi.org/10.1016/j.matpr.2021.05.646
 
-Ghorbani, R., & Ghousi, R. (2020). Comparing different resampling methods in predicting 	students’ performance using Machine Learning Techniques. IEEE Access, 8, 67899–		67911. https://doi.org/10.1109/access.2020.2986809
+Ghorbani, R., & Ghousi, R. (2020). Comparing different resampling methods in predicting students’ performance using Machine Learning Techniques. IEEE Access, 8, 67899–		67911. https://doi.org/10.1109/access.2020.2986809
 
-Haridas, M., Gutjahr, G., Raman, R., Ramaraju, R., & Nedungadi, P. (2020). Predicting school 		performance and early risk of failure from an intelligent tutoring system. Education 		and Information Technologies, 25(5), 3995–4013. https://doi.org/10.1007/s10639-020-10144-0
+Haridas, M., Gutjahr, G., Raman, R., Ramaraju, R., & Nedungadi, P. (2020). Predicting school 		performance and early risk of failure from an intelligent tutoring system. Education and Information Technologies, 25(5), 3995–4013. https://doi.org/10.1007/s10639-020-10144-0
 
 Kuzilek, J., Hlosta, M., & Zdráhal, Z. (2017). Open University Learning Analytics
 datasets. Scientific Data, 4.
@@ -163,10 +163,10 @@ datasets. Scientific Data, 4.
 Kuzilek, J., Hlosta, M. & Zdrahal, Z. Open University Learning Analytics dataset. Sci 
 Data 4, 170171 (2017). https://doi.org/10.1038/sdata.2017.171
 
-Rastrollo-Guerrero, J. L., Gómez-Pulido, J. A., & Durán-Domínguez, A. (2020). Analyzing and 		predicting students’ performance by means of Machine Learning: A Review. Applied 		Sciences, 10(3), 1042. https://doi.org/10.3390/app10031042 
+Rastrollo-Guerrero, J. L., Gómez-Pulido, J. A., & Durán-Domínguez, A. (2020). Analyzing and 		predicting students’ performance by means of Machine Learning: A Review. Applied Sciences, 10(3), 1042. https://doi.org/10.3390/app10031042 
 
-Tanuar, E., Heryadi, Y., Lukas, Abbas, B. S., & Gaol, F. L. (2018). Using machine learning 	techniques to earlier predict student's performance. 2018 Indonesian Association for 	Pattern Recognition International Conference (INAPR). 	https://doi.org/10.1109/inapr.2018.8626856
+Tanuar, E., Heryadi, Y., Lukas, Abbas, B. S., & Gaol, F. L. (2018). Using machine learning 	techniques to earlier predict student's performance. 2018 Indonesian Association for 	Pattern Recognition International Conference (INAPR). https://doi.org/10.1109/inapr.2018.8626856
 
-Wikipedia contributors. (2021, September 12). Protected group. In Wikipedia, The Free         	Encyclopedia. Retrieved 00:28, November 30, 2021, from 	https://en.wikipedia.org/w/index.php?title=Protected_group&oldid=1043946666 
+Wikipedia contributors. (2021, September 12). Protected group. In Wikipedia, The Free         	Encyclopedia. Retrieved 00:28, November 30, 2021, from https://en.wikipedia.org/w/index.php?title=Protected_group&oldid=1043946666 
 
-Wu, S. (2021, June 5). What are the best metrics to evaluate your regression model? 	Medium. Retrieved December 17, 2021, from 	https://towardsdatascience.com/what-are-the-best-metrics-to-evaluate-your-regression-model-418ca481755b
+Wu, S. (2021, June 5). What are the best metrics to evaluate your regression model? 	Medium. Retrieved December 17, 2021, from https://towardsdatascience.com/what-are-the-best-metrics-to-evaluate-your-regression-model-418ca481755b
