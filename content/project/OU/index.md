@@ -90,3 +90,70 @@ Therefore, we can see that predictions from the Gradient Boost model have been a
 ## Best Regression Model Evaluation 
 To do this we need to have a look at how the model performed on the training set and in cross-validation.
 
+
+|  Model Performance   | Support Vector Regression  | Decision Tree  | GradientBoost  | Random Forest  |
+|  ----  | ----  |  ----  | ----  |  ----  |
+|   RMSE  | 23.17564056905  |  17.04841050791  |  17.68650127842 |  16.94388847387  |
+|   Adjusted R2  |  0.391004912092 |  0.670452452090  | 0.645322077665  |  0.674480908668   |
+|   Mean RMSE  | 23.47847806255  |  20.15138032344  | 18.34257947524  |  18.66780891993  |
+|   SD  |  0.232164064898  |  0.459108943933  |  0.249612540275  |  0.339479772941  |
+
+
+
+
+Based on the offered features and the result from the ensemble learning, it can be seen from the table that GradientBoost is our best model, even though the error for the training set without cross-validation for the GBoost is higher than for the Random Forest. Random Forest had the lowest RMSE score for the training set without cross-validation, but this model has the problem of overfitting, as this model's performance degraded in the cross-validation, and the SD is relatively high.
+
+# Extension Task
+
+## Task 1: Annotation Task 
+We summarized our annotation task in the table below.
+
+
+|  |  Annotation Task  |  Annotation Description  |
+|  ----  | ----  |  ----  |
+| 1 | Variable: Score | If the score is < 40, it is a fail, >= 40 and <=100, it is an pass, and if the student does not submit the assessment, no result is recorded. All null scores can be interpreted as non-submissions, so we will fill them out with zeros; null scores will be assigned as passe, as it is ok that most submissions do not fail. |
+| 2 | New Variable: Weighted score | How it will be calculated:
+Multiply the weight of the assignment with its score.
+Aggregate the data frame per weight*score per module presentation with the sum function.
+Calculate the total recorded weight of the module
+calculate weighted scores - divide summed weight*score by total recorded weight of the module |
+| 3 | New Variable: Late submission | Calculate the rate of late submission for the assignments that the student did submit.
+How will be calculated: Calculate the difference between the deadline and the actual submission date. Make a new column - if the difference between dates is more than that), the submission was late. Aggregate by student ID, module, and module presentation. |
+| 4 | Merge dataframes | $$VLE + VLE materials = total_click_per_student$$.   We can merge these two tables with an inner merge as resources with no activity for any student to provide zero information. We will drop week_from, week_to, and date columns.
+Registration Info + Courses + Student Info = regCoursesInfo
+We will inner merge these three tables based on code_module, code_presentation, and id_student.
+$$Assessments + Results = assessments$$
+We will inner merge these three tables based on id_assessment. |
+| 5 | Missing values | IMD band: Fill them according to the most frequent band for that region.
+Date registration: For the withdrawn students, we will subtract the median value from the registration date to fill these.
+total_click: We will  replace them with 0s (meaning not interested in it).
+weighted_score: We will  replace the nan values with 0s (meaning do not make submissions).
+late_rate: We will replace the nan values with 1.00 (100% late rate).
+fail_rate: We will replace them with 100% (1.0) (meaning do not make any submissions).  |
+| 6 | Drop columns | The is_banked column is dropped along with date_submitted and assessment_type.  |
+
+
+
+
+## Task 2: Fairness Audit 
+Fairness is a topic we often mention in recent days, and features with sensitive fairness characteristics may also have an impact on the model prediction. According to reports from UK universities, the degree-awarding gap for Black, Asian, and Minority Ethnic (BAME) students is 13 percent, with similar effects seen when comparing students across other protected attributes such as gender or disability (Bayer et al., 2021). Typically, demographic information such as age, ethnicity, nationality, and religious beliefs are commonly used in most circumstances. 
+
+In the Open University dataset, we found these features are suspicious and worth additional analysis: gender, region, highest_education, imd_band, age_band, disability. Based on the previous regression results, we separated our features into two groups: group 1 only contains fairness-related features as listed above, and group 2 only contains fairness-disrelated features, and group 3 is the original feature set that contains all features. Then we made 3 individual Gradient Boost models and correspondingly applied different feature groups (we chose Gradient Boost because it had been proved to be the best performed regression model during our analysis). The results are shown as below:
+
+
+
+|  |  Group 1 (Fairness-related) | Group 2 (Fairness-disrelated) |  Group 3 (Complete)  |
+|  ----  | ----  |  ----  |  ----  |
+|  RMSE  | 29.46174938633362  |  18.118993632790925  |  18.381595870859417  |
+|  Adjusted R2  | 0.0227914023132904  |  0.630394553567488  |  0.6192524105918902  |
+
+
+It can be seen from our results that deleting fairness-related features in our dataset basically very slightly improves the model performance (as the adjusted R2 slightly increased, while the square root of MSE slightly decreased). But as the adjustment is pretty subtle, we cannot conclude here that fairness-related features have some impacts on our model. However, it is always rigorous to consider these aspects and modify our model to be more realistic, and can predict more precisely. 
+
+## Task 3: Literature Review
+Using machine learning models to predict the students’ academic performance has profound meanings. Dabhade et. al. (2021) maintained that these machine learning algorithms can help provide quality advice to educational institutions so that students can enhance their academic performance. 
+
+Various techniques were used worldwide in this area. In India, Haridas et al. (2020) adopted machine learning models to predict the students’ performance of an intelligent tutoring system called AmritaITS. They concluded that the prediction models for summative assessments were considerably improved by formative assessments scores and AmritaITS logs (Haridas et al., 2020). In addition, Chui et al. (2020) adopted an improved conditional generative adversarial network-based deep support vector machine (ICGAN-DSVM) algorithm to predict students' performance under supportive learning via school and family tutoring. 
+
+In our models, the Decision Tree and Random Forest prediction models received relatively good results for predicting the students’ performance. Fortunately, this result is not alone in this field. During Canagareddy D. et al. (2019)’s research about a machine learning model to predict the performance of University students, they concluded that their best prediction model is Random Forest. Also, Decision tree models managed to behave as one of the first-tier models for predicting students’ final performance at an early stage (Tanuar, E. et al., 2018). 
+
