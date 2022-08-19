@@ -1,19 +1,17 @@
 ---
 title: "Yelp Challenge 2019"
 subtitle: "Yelp Inc. is an American company that develops the Yelp.com website and the Yelp mobile app, which publish crowd-sourced reviews about businesses. Yelp has made their data available to public and launched Yelp challenge. The dataset is a subset of our businesses, reviews, and user data in JSON format. "
-excerpt: "The goals are
-1) Try to identify important words associated with positive ratings and negative ratings. Collectively we
-have a sentiment analysis.
-2) To predict ratings using different methods."
+excerpt: "The goals in this study are 1) to identify important words associated with positive ratings and negative ratings, and 2) to predict ratings using different methods."
 date: 2022-03-30
 author: "Jia Xu"
 draft: false
 tags:
-  - hugo-site
+  - Project
 categories:
   - Machine Learning
   - R
-  - Alzheimer's Disease
+  - Data Mining
+  - Data Science
 # layout options: single or single-sidebar
 layout: single
 ---
@@ -34,7 +32,7 @@ For this case study, we downloaded the [data](https://www.yelp.com/dataset/downl
 ```
 
 
-**Data needed:** yelp_review_20k.json available ![HERE](yelp_review_20k.json).
+**Data needed:** yelp_review_20k.json available [HERE](yelp_review_20k.json).
 
 **yelp_review_20k.json** contains full review text data including the user_id that wrote the review and the business_id the review is written for. Here's an example of one review.
 
