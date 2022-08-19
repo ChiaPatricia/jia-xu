@@ -49,3 +49,44 @@ After pre-processing and merging datasets, we have chosen features as listed for
 |  module_presentation_length (length) | Length of the module-presentation in days. |
 | total_click(sum_click)  | The number of times a student interacts with the material in that day |
 
+
+
+As we were applying regression methods in our design, we chose to judge the model performances based on evaluation indexes (Wu, S.) as below:
+
+|  Evaluation Features   |  Description |
+|  ----  | ----  |
+|  Adjusted R2 | It measures how much variability in dependent variables can be explained by the model. The adjusted R2 will also penalize additional independent variables added to the model and adjust the metric to prevent over-fitting issues. |
+| MSE  | It is an absolute measure of the goodness for the fit and calculates an absolute number on how much your predicted results deviate from the actual number. |
+| RMSE  | It is the square root of MSE. It brings it back to the same level of prediction error and is easier for interpretation. |
+
+
+## Support Vector Regression 
+The multiple Linear regression using all our features selected is doing badly, as expected, with a R square of around 0.35. We will next use machine learning regression and models to see if our predictions improve. 
+
+Support Vector Regression seeks not to minimize the squared error as in the linear regression, but to minimize coefficients. Compared to the original multiple linear regression model, Support Vector regression has an adjusted R-square of around 0.39. The training error of these two models is basically the same: approximately 23.18 for Support Vector Regression and about 23.91 for the multiple linear regression. Overall, this is a rather slight improvement, and we may need to further investigate a better model.
+
+## Decision Tree 
+Decision Trees are divided into Classification and Regression Trees. Regression trees are needed when the response variable is numeric or continuous. In our case, we exploited the decision regression trees as we have numeric variables in our feature set.
+
+Unlike the Support Vector regression, our Decision Tree regression shows a significantly better result compared to the multiple linear regression. The training error (RMSE) for the Decision Tree model is around 17 and the adjusted R square is around 0.67. As the multiple linear regression explains about only 23% of the variation in our model, we witnessed an approximately 191% increase about the adjusted R square. Therefore, we can say that the decision tree model is doing a relatively good job.
+
+
+## Gradient Boost 
+Gradient Boost is a popular machine learning algorithm that tries to find the best model prediction performance step by step (using an ensemble of weak predictive models, and the ensembled model can have better performance compared to individual ones). In our model, Gradient Boost can be called as the best model with a relatively small square root of prediction error (RMSE) of 17.69, and relatively small validation error (mean RMSE = 18.34, SD = 0.25). And the adjusted R2 shows that the model can explain 64.5% of the total variance.
+
+## Random Forest 
+A random forest is a meta estimator that fits several classifying decision trees on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting. The result of the Random Forest regression model looks great. Training error (RMSE = 16.94) is not much lower than validation error (mean RMSE = 18.67, SD = 0.34). 
+
+## Ensemble Learning
+To better conclude which regression model is performing better, we also applied ensemble learning techniques in regression here (which is widely accepted as a method for combining predictions from different regression models). To better improve the precision, we chose the stacking ensemble method, which assigns different weights to different individual models, and then fit a new linear regression model, which takes predictions from four regression models as features. The newly produced ensemble learning linear regression model’s intercept and coefficients are as below:
+
+|  Intercept   | Coefficient 1  | Coefficient 2  | Coefficient 3  | Coefficient 4  |
+|  ----  | ----  |  ----  | ----  |  ----  |
+|  0.606318586476  | -0.13609429  |  0.03771186  | 0.70655808  |  0.38731542  |
+
+
+Therefore, we can see that predictions from the Gradient Boost model have been assigned the largest weight, and predictions from the Random Forest model have been assigned the second largest weight, which proves the good judgment of Gradian Boost prediction results made in the primary task.
+
+## Best Regression Model Evaluation 
+To do this we need to have a look at how the model performed on the training set and in cross-validation.
+
