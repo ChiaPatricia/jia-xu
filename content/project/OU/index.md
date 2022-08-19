@@ -18,6 +18,8 @@ layout: single
 
 ![Open University Learning Analytics Dataset](featured-hex.png)
 
+Our code is based on Google Colaboratory platform using Python language.
+Colab Python Code Link: [CLICK HERE](https://drive.google.com/file/d/1kI_lAYp8NdHNzy-BiA0z91k3zM-hoelX/view?usp=sharing) (May not be viewed if viewer is in China. Please visit [here](https://qiangup.com/gfw/) for more information.)
 ---
 
 
@@ -111,7 +113,7 @@ We summarized our annotation task in the table below.
 
 |  |  Annotation Task  |  Annotation Description  |
 |  ----  | ----  |  ----  |
-| 1 | Variable: Score | If the score is $< 40$, it is a fail, $>= 40 and <=100$, it is an pass, and if the student does not submit the assessment, no result is recorded. All null scores can be interpreted as non-submissions, so we will fill them out with zeros; null scores will be assigned as passe, as it is ok that most submissions do not fail. |
+| 1 | Variable: Score | If the score is $< 40$, it is a fail, $>= 40 \& <=100$, it is an pass, and if the student does not submit the assessment, no result is recorded. All null scores can be interpreted as non-submissions, so we will fill them out with zeros; null scores will be assigned as passe, as it is ok that most submissions do not fail. |
 | 2 | New Variable: Weighted score | How it will be calculated:  Multiply the weight of the assignment with its score. Aggregate the data frame per weight * score per module presentation with the sum function. Calculate the total recorded weight of the module calculate weighted scores - divide summed weight*score by total recorded weight of the module |
 | 3 | New Variable: Late submission | Calculate the rate of late submission for the assignments that the student did submit. How will be calculated:  Calculate the difference between the deadline and the actual submission date. Make a new column - if the difference between dates is more than that), the submission was late. Aggregate by student ID, module, and module presentation. |
 | 4 | Merge dataframes | $VLE + VLE materials = \text{total_click_per_student}.$   We can merge these two tables with an inner merge as resources with no activity for any student to provide zero information. We will drop week_from, week_to, and date columns.  $Registration Info + Courses + Student Info = regCoursesInfo.$ We will inner merge these three tables based on code_module, code_presentation, and id_student.  $Assessments + Results = assessments.$ We will inner merge these three tables based on id_assessment. |
