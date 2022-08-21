@@ -57,7 +57,7 @@ $\textbf{Summary Points}$:
 
 ## Data cleaning & Visualization
 
-(For data privacy, all the data will be shown in `-` , cross-referenced results and recommendations are omitted here. Thank you for your understanding!)
+(For data privacy reasons, all the data will be shown in `-` , cross-referenced results and recommendations are omitted here. Thank you for your understanding!)
 
 The basic characteristics of the dataset and the potential difficulties that we would run into in data cleaning. 
 
