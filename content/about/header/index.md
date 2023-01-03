@@ -15,7 +15,7 @@ I'm passionate about learning and applying data Science and analytics skills int
 Currently I'm a research assistant at [Shen Lab, Perelman School of Medicine](https://www.med.upenn.edu/shenlab/) focusing on developing and applying data science methods for discovering actionable knowledge from complex biomedical and health data, and also a technical assistant at [Wharton Customer Analytics, The Wharton School](https://wca.wharton.upenn.edu/students/technical-assistant-program/) working with Master Kong, Wharton Analytics Fellows, and Mentors (Joseph Davin, Harini Sridharan, and Brandon Krakowsky) to process and analyze data from the JD.com Business Intelligence platform and DataLab to reverse customize the SKU recommendation engine for existing products using Spark.
 
 
-<a href="/content/about/header/resume.pdf" download="resume.pdf">Click to Download Resume (Chinese and English)</a>
+<a href="https://drive.google.com/file/d/15VeRRidkXEqsMKCZWqFDECS_CkzjJcNk/view?usp=share_link">Click to Download Resume (Chinese and English)</a>
 
 <img src="/img/mortarboard.png" alt="mortarboard" width="20"/> M.S. Data Analytics in Social Policy ∙ University of Pennsylvania ∙ 2023
 
