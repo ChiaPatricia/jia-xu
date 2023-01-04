@@ -37,7 +37,7 @@ For all the cool things about BrainSuite, why don’t we go ahead into our demo 
 
 
 ---
-# Demo Highlights
+### Demo Highlights
 
 ![Demo_1](BrainSuite_Presentation_页面_03.jpg)
 ![Demo_2](BrainSuite_Presentation_页面_04.jpg)
@@ -45,24 +45,24 @@ For all the cool things about BrainSuite, why don’t we go ahead into our demo 
 ![Demo_4](BrainSuite_Presentation_页面_06.jpg)
 
 ---
-# Research Impacts
+### Research Impacts
 ![Research_Impacts](BrainSuite_Presentation_页面_07.jpg)
 
 ---
-# User Experience
+### User Experience
 ![User_Experience](BrainSuite_Presentation_页面_08.jpg)
 
 ---
-# Special Case in Autism Spectrum Disorders (ASD)
+### Special Case in Autism Spectrum Disorders (ASD)
 ![ASD_Case](BrainSuite_Presentation_页面_09.jpg)
 
 
 ---
-# Benefit Summary
+### Benefit Summary
 ![Benefit_Summary](BrainSuite_Presentation_页面_10.jpg)
 
 ---
-# Resources & References
+### Resources & References
 
 Demo jupyter notebook, https://colab.research.google.com/drive/1JcZAn5P2s3T3ChJpbK1h0u-u-IgoEMUY?usp=sharing 
 BrainSuite official website
