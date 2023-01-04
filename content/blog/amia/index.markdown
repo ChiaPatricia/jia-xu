@@ -1,33 +1,36 @@
 ---
-title: "Simplified analysis of MHD flow in a porous surrounding bounded by an oscillating vertical cylindrical surface"
-subtitle: "Case Studies in Thermal Engineering."
+title: "Identification of the Most Determinant Demographic and Biological Factors for the Phenotypic and Chronological Age Difference Prediction in the NHANES Cohort"
+subtitle: "AMIA 2023 Informatics Summit"
 excerpt: "This study developed the relatively simple mathematical model by adding a radiation effect and transverse magnetic field to the physical model, taking into account heat and mass transfer of a permeable, saturated porous medium, infinite oscillating cylindrical plate. "
-date: 2022-02-01
-author: "Yunyun Wu, Jia Xu"
+date: 2022-12-21
+author: "Jia Xu, Yuezhi Xie, Yuqin Zhang, Daniele Pala, Li Shen"
 draft: false
 # layout options: single, single-sidebar
 layout: single
 categories:
-- MATLAB
-- Simulation Study
+- Python
+- Aging
+- Data Science
+- Bioinformatics
 ---
 
-![MHD](featured.jpg)
-### Abstract
-This study developed the relatively simple mathematical model by adding a radiation effect and transverse magnetic field to the physical model, taking into account heat and mass transfer of a permeable, saturated porous medium, infinite oscillating cylindrical plate. In comparison, magnetohydrodynamics reality flow pattern in most earlier works was ignored in porous media. We have performed a semi-analytical method for numerical inverse Laplace transformation into PDEs of radiation on Newtonian fluids’ heat and mass transfer. The numerical stability method is used to analyze the influence of parameter variation for different values of M and N. We took into account both the local flow velocity distribution and concentration profile with the effect of Sc and time t and the skin friction against time t. There are several variations examined between the heat transfer under the cylinder boundary conditions and the plane boundary conditions. The findings given by empirical and numerical approaches are in good agreement. As seen in the literature, the numerical results on the local flow velocity agree closely with the solutions available. Our observations, meanwhile, show that the rate of heat transfer can be boosted using a magnetic field. The curved surface of the boundary configuration will restrain velocity and the temperature rise, while it has little effect on the mass transfer rate.
+![AMIA](featured.jpg)
 
-### Keywords
-MHD; Porous regime; Radiation; Laplace transformation
+### Introduction
+According to the United Nations, the global population is rapidly aging. 
+%In 2018, for the first time in history, people 65 years or older outnumbered children under five years of age globally. The number of persons aged 80 years or over is projected to triple, from 143 million in 2019 to 426 million in 2050. 
+Several factors contribute to this, such as increased longevity and a general natality rate reduction, especially in Europe and the United States.
 
-### Published Journal
-[Case Studies in Thermal Engineering](https://www.sciencedirect.com/journal/case-studies-in-thermal-engineering) (SCI-Q1, Impact Factor: 6.268)
+Past research has demonstrated that aging is related to the risk of developing numerous diseases, such as cardiovascular and neurodegenerative conditions. 
+Several studies have been developing tools and analysis pipelines to identify aging individuals with increased disease or mortality risks. For example, Liu et al. \cite{liu2018new} developed a new aging rate indicator named \emph{phenotypic age}, an epigenetic biomarker of aging obtained by the linear combination of chronological age and 9 clinical biomarkers, that indicates the rate of aging of a person expressed considering their mortality risk and general health conditions, and that can be notably different even in individuals with the same chronological age. Phenotypic age can be computed using the PhenoAge algorithm \cite{levine2018epigenetic}, that we adopt in this paper. This indicator was demonstrated to be related to mortality risk in a large population cohort, even stratifying by indicators such as age, ethnicity, education, health behaviors and cause of death. This score has been calculated using data coming from the \emph{National Health and Nutrition Examination Survey (NHANES)} dataset \cite{patel2016database}, a large repository that contains laboratory markers, demographic and socioeconomic indicators and survey data of tens of thousands of individuals. 
 
-### Citation
-Yunyun Wu, Jia Xu,
-Simplified analysis of MHD flow in a porous surrounding bounded by an oscillating vertical cylindrical surface,
-Case Studies in Thermal Engineering,
-Volume 30,
-2022,
-101737,
-ISSN 2214-157X,
-https://doi.org/10.1016/j.csite.2021.101737.
+PhenoAge has been extensively used in numerous scientific research studies, mostly concerning its usefulness in predicting mortality and age-related conditions. However, studies focused on which factors, both biological and demographic/socioeconomic, mostly contribute to increasing the difference between chronological age and phenotypic age, apart from those used for its calculation, are generally lacking. 
+
+This study uses data from a database of human exposomes and phenomes from NHANES published on Dryad \cite{patel2016database} to identify which factors have the highest effect in having a phenotypic age that differs greatly from the chronological one.
+
+
+
+
+### Conference
+[AMIA 2023 Informatics Summit](https://amia.org/education-events/amia-2023-informatics-summit)
+
