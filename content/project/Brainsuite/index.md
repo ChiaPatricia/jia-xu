@@ -10,10 +10,12 @@ excerpt: BrainSuite is a collection of open source software tools that enable la
   tools for visualizing and interacting with the data.
 subtitle: Automated processing of Magnetic Resonance Images (MRI) of the Human Brain
 draft: no
-tags: "Brain Imaging Analysis"
+tags:   
+  - Brain Imaging Analysis
 categories:
-- Python
-- package
+  - Python
+  - Deep Learning
+  - MRI/fMRI
 layout: single
 links:
 - icon: "door-open"
