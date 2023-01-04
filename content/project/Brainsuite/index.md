@@ -30,7 +30,7 @@ links:
 
 # Overview
 
-![Overview](BrainSuite Presentation_页面_02.jpg)
+![Overview](BrainSuite_Presentation_页面_02.jpg)
 
 BrainSuite comes as an interactive tool with GUI support, which enables researchers to work without specialized programming knowledge. However, for those comfortable with coding, customizable workflow is also available through BrainSuite module in Nipype Interface.
 For all the cool things about BrainSuite, why don’t we go ahead into our demo highlights.
@@ -39,27 +39,27 @@ For all the cool things about BrainSuite, why don’t we go ahead into our demo 
 ---
 # Demo Highlights
 
-![Demo_1](BrainSuite Presentation_页面_03.jpg)
-![Demo_2](BrainSuite Presentation_页面_04.jpg)
-![Demo_3](BrainSuite Presentation_页面_05.jpg)
-![Demo_4](BrainSuite Presentation_页面_06.jpg)
+![Demo_1](BrainSuite_Presentation_页面_03.jpg)
+![Demo_2](BrainSuite_Presentation_页面_04.jpg)
+![Demo_3](BrainSuite_Presentation_页面_05.jpg)
+![Demo_4](BrainSuite_Presentation_页面_06.jpg)
 
 ---
 # Research Impacts
-![Research_Impacts](BrainSuite Presentation_页面_07.jpg)
+![Research_Impacts](BrainSuite_Presentation_页面_07.jpg)
 
 ---
 # User Experience
-![User_Experience](BrainSuite Presentation_页面_08.jpg)
+![User_Experience](BrainSuite_Presentation_页面_08.jpg)
 
 ---
 # Special Case in Autism Spectrum Disorders (ASD)
-![ASD_Case](BrainSuite Presentation_页面_09.jpg)
+![ASD_Case](BrainSuite_Presentation_页面_09.jpg)
 
 
 ---
 # Benefit Summary
-![Benefit_Summary](BrainSuite Presentation_页面_10.jpg)
+![Benefit_Summary](BrainSuite_Presentation_页面_10.jpg)
 
 ---
 # Resources & References
