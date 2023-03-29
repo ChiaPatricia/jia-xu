@@ -6,11 +6,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dfa8a8fa-cca0-4917-aae5-27d89527b7ff/deploy-status)](https://app.netlify.com/sites/silly-babbage-223d45/deploys)
 
 
-# _Hugo Apéro_ - a personal website theme made for Hugo by [RStudio](https://rstudio.com/). 
 
-# Based on [Blogophonic](https://github.com/formspree/blogophonic-hugo) by [Formspree](https://formspree.io).
-
-# A modern, beautiful, and easily configurable theme for Hugo websites. It offers more than a blog, with flexible custom layouts that help you introduce yourself online.
 
 **See the demo site [here](https://hugo-apero.netlify.com)**
 
