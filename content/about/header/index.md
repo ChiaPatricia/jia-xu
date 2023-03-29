@@ -19,7 +19,7 @@ Driven by my desire to make a positive difference in the world, I bring a unique
 I am passionate about learning and continuously seek new opportunities to challenge myself and apply my skills to drive meaningful outcomes. Thank you for taking the time to visit my personal website, and I look forward to exploring how I can contribute to your team or organization.
 
 
-# [Click to View Resume (Chinese and English)](https://drive.google.com/file/d/1_YxXEjKVNs6eIq7Svjq1xMP6_-LOXevZ/view?usp=share_link)
+[Click to View Resume (Chinese and English)](https://drive.google.com/file/d/1_YxXEjKVNs6eIq7Svjq1xMP6_-LOXevZ/view?usp=share_link)
 
 <img src="/img/mortarboard.png" alt="mortarboard" width="20"/> M.S. Data Analytics in Social Policy ∙ University of Pennsylvania ∙ 2023
 
