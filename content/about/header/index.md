@@ -8,13 +8,18 @@ headline: |
 
 <!-- this is a subheadline -->
 
-My name is Jia Xu (Name in Chinese: 徐嘉). I was born in Wuxi, China. Motivated for a data science career, I am currently pursuing a Data Analytics Master of Science in Social Policy degree (MSSPDA) at University of Pennsylvania. 
+My name is Jia Xu, and I was born in Wuxi, China. My passion for data science has led me to pursue a Data Analytics Master of Science in Social Policy degree (MSSPDA) at the University of Pennsylvania. Inspired by real-world problems in the fields of finance and health, I am driven to learn and apply data science and analytics skills to make a meaningful impact in these areas.
 
-I'm passionate about learning and applying data Science and analytics skills into the field of finance and health inspired by real-world tough problems. 
+I currently hold positions as a research assistant at the [Shen Lab, Perelman School of Medicine](https://www.med.upenn.edu/shenlab/), where I focus on developing and applying data science methods to extract actionable insights from complex biomedical and health data. Additionally, I am a research assistant in the political science department at the University of Pennsylvania, working collaboratively with UC Berkeley and Columbia University to measure the pro/anti government bias of different TV stations using NLP techniques.
 
-Currently I'm a research assistant at [Shen Lab, Perelman School of Medicine](https://www.med.upenn.edu/shenlab/) focusing on developing and applying data science methods for discovering actionable knowledge from complex biomedical and health data, and also a technical assistant at [Wharton Customer Analytics, The Wharton School](https://wca.wharton.upenn.edu/students/technical-assistant-program/) working with Master Kong, Wharton Analytics Fellows, and Mentors (Joseph Davin, Harini Sridharan, and Brandon Krakowsky) to process and analyze data from the JD.com Business Intelligence platform and DataLab to reverse customize the SKU recommendation engine for existing products using Spark.
+With an undergraduate degree in mathematics and applied mathematics and ongoing graduate studies in social policy and data analytics, I am passionate about leveraging my expertise in both health and business settings. My talent for analyzing complex data sets and my keen eye for detail have allowed me to develop a proven track record of success in various data science roles, from conducting intricate data analysis and modeling to designing innovative data-driven strategies and solutions.
 
-[Click to View Resume (Chinese and English)](https://drive.google.com/file/d/15VeRRidkXEqsMKCZWqFDECS_CkzjJcNk/view?usp=share_link)
+Driven by my desire to make a positive difference in the world, I bring a unique combination of technical expertise and strategic vision to every project I undertake. Whether working in the healthcare industry to develop more effective treatments and therapies or partnering with businesses to optimize operations and drive growth, I am committed to leveraging data science for good.
+
+I am passionate about learning and continuously seek new opportunities to challenge myself and apply my skills to drive meaningful outcomes. Thank you for taking the time to visit my personal website, and I look forward to exploring how I can contribute to your team or organization.
+
+
+# [Click to View Resume (Chinese and English)](https://drive.google.com/file/d/1_YxXEjKVNs6eIq7Svjq1xMP6_-LOXevZ/view?usp=share_link)
 
 <img src="/img/mortarboard.png" alt="mortarboard" width="20"/> M.S. Data Analytics in Social Policy ∙ University of Pennsylvania ∙ 2023
 
