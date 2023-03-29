@@ -38,20 +38,20 @@ Traditionally, their impact on communities has been measured by the greenery the
 While it is not always equitable to access green spaces within cities, it is important to recognize this issue of environment justice and to raise public  awareness of the benefitsofgreen spaces for public health.
 
 
-$\textbf{Project Objective}
+$\textbf{Project Objective}$
 To reflect the influence of green space on community health, our project has the following two levels of objectives:
 
 The first step is to model the Environmental-Social Green Space (ESGS) Index for each county in the U.S. as a cross-group demonstration and measurement.
 
 The second step is to examine the relationship between ESGS and specific demographic groups so as to provide key insights and recommendations to improve environmental and social justice for disadvantaged groups.
 
-$\textbf{Data Overview}
+$\textbf{Data Overview}$
 Our dataset consists of 4 raw datasets derived from Green Space Challenge data packages on recidivism, including PAD-US-AR, County Health Rankings, FEMA: National Risk Index, and EnviroAtlas: Green space by census block. 
 
 PAD-US-AR: The dataset contains information on protected areas in the United States. 
 County Health Rankings: This dataset contains health indicators for different counties in the United States
 
-FEMA: National Risk Index: TheThe National Risk Index is a dataset and online tool to help illustrate the U.S. communities most at risk for 18 natural hazards. It was designed and built by FEMA in close collaboration with various stakeholders and partners in academia; local, state, and federal government; and private industry. 
+FEMA: National Risk Index: The National Risk Index is a dataset and online tool to help illustrate the U.S. communities most at risk for 18 natural hazards. It was designed and built by FEMA in close collaboration with various stakeholders and partners in academia; local, state, and federal government; and private industry. 
 
 EnviroAtlas: This dataset contains information on green spaces in the United States
 Among those datasets, we identify 12 target features that are relevant to our research questions. To link the data from these sources, we merged using the county's Federal Information Processing Standard (FIPS) code as the key.
