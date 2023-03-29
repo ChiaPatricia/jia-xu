@@ -1,8 +1,8 @@
 ---
 title: "Jia Xu"
 subtitle: "Welcome to My Personal Website! "
-description: "Hi, my name is Jia Xu (徐嘉). Currently, I'm a graduate student at University of Pennsylvania, studying data analytics in social policy and a research assistant at Shen Lab, Perelman School of Medicine. My current work mainly focuses on data science."
-date: 2022-08-03T12:27:33-06:00
+description: "Hi, I am Jia Xu, a data science enthusiast pursuing a Data Analytics Master of Science in Social Policy degree at the University of Pennsylvania. With experience as a research assistant at the Shen Lab, Perelman School of Medicine and in the political science department at the University of Pennsylvania, I have a proven track record of success in data science roles. I bring a unique combination of technical expertise and strategic vision to every project, and I am committed to leveraging data science to drive positive change."
+date: 2023-03-28T12:27:33-06:00
 images:
   - img/dc_cherry_blossoms.jpg
 image_left: false
