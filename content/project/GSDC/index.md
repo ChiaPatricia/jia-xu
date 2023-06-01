@@ -39,6 +39,7 @@ While it is not always equitable to access green spaces within cities, it is imp
 
 
 $\textbf{Project Objective}$
+
 To reflect the influence of green space on community health, our project has the following two levels of objectives:
 
 The first step is to model the Environmental-Social Green Space (ESGS) Index for each county in the U.S. as a cross-group demonstration and measurement.
@@ -46,6 +47,7 @@ The first step is to model the Environmental-Social Green Space (ESGS) Index for
 The second step is to examine the relationship between ESGS and specific demographic groups so as to provide key insights and recommendations to improve environmental and social justice for disadvantaged groups.
 
 $\textbf{Data Overview}$
+
 Our dataset consists of 4 raw datasets derived from Green Space Challenge data packages on recidivism, including PAD-US-AR, County Health Rankings, FEMA: National Risk Index, and EnviroAtlas: Green space by census block. 
 
 PAD-US-AR: The dataset contains information on protected areas in the United States. 
