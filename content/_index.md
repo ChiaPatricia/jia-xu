@@ -2,7 +2,7 @@
 title: "Jia Xu"
 subtitle: "Welcome to My Personal Website! "
 description: "Hello! I’m Jia Xu, a researcher and innovator specializing in Computational Medicine and Artificial Intelligence. As a Ph.D. Researcher at Northeastern University, I focus on leveraging advanced AI techniques to develop personalized healthcare solutions and address critical medical challenges. My work spans fine-tuning large language models, creating trustworthy AI systems, and analyzing complex clinical datasets to drive transformative change in healthcare. With a strong foundation in computational methods, interdisciplinary research, and a passion for impactful solutions, I am dedicated to bridging the gap between cutting-edge technology and real-world applications for a healthier future."
-date: 2023-03-28T12:27:33-06:00
+date: 2025-03-16T12:27:33-06:00
 images:
   - img/jia.jpg
 image_left: false
